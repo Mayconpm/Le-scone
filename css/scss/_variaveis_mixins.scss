@@ -1,0 +1,33 @@
+// Cores
+$cor_primaria: #edece4;
+$cor_secundaria: #cbc6b9;
+$cor_terciaria: #988c77;
+$cor_quaternaria: #2a2426;
+// $cor_quinaria: ;
+
+// Fontes
+$font_1: "PT Mono", monospace;
+$font_2: "Aref Ruqaa", serif;
+
+@function em($pixel, $contexto: 16) {
+  @return $pixel / $contexto + em;
+}
+
+@mixin tipografia_1($size) {
+  font-family: $font_1;
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+}
+
+@mixin tipografia_2($size) {
+  font-family: $font_2;
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  } @else if $size == 24 {
+    font-size: em(24);
+    line-height: em(30, 24);
+  }
+}
