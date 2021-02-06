@@ -13,18 +13,17 @@ $small_device: 480px;
 }
 
 // mixin de media-query
-
 @mixin device($size) {
   @if $size == large {
     @media screen and (min-width: #{$large_device}) {
       @content;
     }
   } @else if $size == medium {
-    @media screen and (min-width: $medium_device) and (max-width: $large_device - 1) {
+    @media screen and (min-width: $medium_device) and (max-width: #{$large_device - 1}) {
       @content;
     }
   } @else if $size == small {
-    @media screen and (max-width: $medium_device - 1) {
+    @media screen and (max-width: #{$medium_device - 1}) {
       @content;
     }
   }
@@ -54,7 +53,7 @@ $small_device: 480px;
   min-height: 1px;
   margin-left: $gutter / 2;
   margin-right: $gutter / 2;
-  @include device(mobile) {
+  @include device(small) {
     width: 100%;
     float: none;
     margin-left: 0px;
@@ -62,7 +61,7 @@ $small_device: 480px;
   }
 }
 
-[class^=".grid_"] {
+[class^="grid_"] {
   @include grid_structure;
 }
 
@@ -73,7 +72,6 @@ $small_device: 480px;
     @extend %offset;
   }
 }
-
 @include device(small) {
   %offset {
     margin-left: 0px;
@@ -100,11 +98,31 @@ $small_device: 480px;
   }
   @include device(small) {
     max-width: $small_device;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   @include clearfix;
 }
 .container {
   @include container;
+}
+
+@mixin row {
+  position: relative;
+  margin-left: -$gutter/2;
+  margin-right: -$gutter/2;
+  @include device(small) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.row {
+  @include row;
+}
+
+div {
+  background: rgba($color: #000000, $alpha: 0.4);
+  min-height: 50px !important;
+  margin-bottom: 20px;
 }
