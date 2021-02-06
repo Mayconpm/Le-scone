@@ -120,9 +120,3 @@ $small_device: 480px;
 .row {
   @include row;
 }
-
-div {
-  background: rgba($color: #000000, $alpha: 0.4);
-  min-height: 50px !important;
-  margin-bottom: 20px;
-}
