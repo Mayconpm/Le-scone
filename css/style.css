@@ -418,3 +418,90 @@ p {
   border: 10px solid #cbc6b9;
   width: 100%;
 }
+
+.menu {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 759px) {
+  .menu {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.menu_item {
+  margin-bottom: 60px;
+}
+
+.menu_item h2 {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+
+.menu_item li {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  line-height: 1.94444em;
+}
+
+.menu_item li span {
+  font-family: "Aref Ruqaa", serif;
+  color: #988c77;
+  display: inline-block;
+  width: 70px;
+  margin-right: 10px;
+  text-align: right;
+  margin-left: -80px;
+}
+
+@media screen and (max-width: 759px) {
+  .menu_item li span {
+    margin-left: 0px;
+    width: auto;
+  }
+}
+
+.menu_item img {
+  border-radius: 50%;
+  border: 10px solid #cbc6b9;
+  position: absolute;
+  right: 0px;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .menu_item img {
+    right: 120px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .menu_item img {
+    width: 120px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+}
+
+.contato {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 759px) {
+  .contato {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.contato form label {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+}

@@ -1,6 +1,6 @@
 body {
   background: $cor_primaria;
-  border: 10px solid $cor_secundaria;
+  border: $borda_principal;
   color: $cor_quaternaria;
   @include device(small) {
     border: none;

@@ -1,0 +1,42 @@
+.menu {
+  @include titulo;
+}
+.menu_item {
+  margin-bottom: 60px;
+  h2 {
+    @include tipografia_2(24);
+    margin-bottom: 1em;
+  }
+  li {
+    @include tipografia_1(18);
+    line-height: em(35, 18);
+    span {
+      font-family: $fonte_2;
+      color: $cor_terciaria;
+      display: inline-block;
+      width: 70px;
+      margin-right: 10px;
+      text-align: right;
+      margin-left: -80px;
+      @include device(small) {
+        margin-left: 0px;
+        width: auto;
+      }
+    }
+  }
+  img {
+    border-radius: 50%;
+    border: $borda_principal;
+    position: absolute;
+    right: 0px;
+    margin-top: 50px;
+    @include device(large) {
+      right: 120px;
+    }
+    @include device(small) {
+      width: 120px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+  }
+}
