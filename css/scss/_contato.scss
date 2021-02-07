@@ -1,2 +1,72 @@
+$border_contato: 2px solid $cor_terciaria;
 .contato {
+  @include titulo;
+  form {
+    label {
+      @include tipografia_1(18);
+      display: block;
+    }
+    input[type="text"],
+    textarea {
+      @include tipografia_1(18);
+      color: $cor_quaternaria;
+      width: 100%;
+      padding: 0 5px;
+      height: 40px;
+      border: $border_contato;
+      background: transparent;
+      margin-bottom: 1em;
+      &:hover,
+      &:focus {
+        outline: none;
+        border-color: $cor_secundaria;
+      }
+    }
+    textarea {
+      height: 120px;
+    }
+  }
+}
+
+input.button {
+  @include tipografia_1(18);
+  cursor: pointer;
+  color: $cor_terciaria;
+  text-transform: uppercase;
+  border: $border_contato;
+  background: transparent;
+  display: block;
+  width: 200px;
+  padding-top: 5px;
+  @include box-shadow(
+    5px 5px 0 -2px $cor_secundaria,
+    5px 5px 0 0 $cor_terciaria
+  );
+  transition: 0.3s;
+  &:hover {
+    @include box-shadow(
+      3px 3px 0 -2px $cor_secundaria,
+      3px 3px 0 0 $cor_terciaria
+    );
+  }
+}
+
+.contato_info {
+  display: inline-block;
+  color: $cor_terciaria;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  @include device(large) {
+    float: right;
+    text-align: right;
+    margin-top: -3em;
+  }
+}
+.contato_mapa {
+  display: block;
+  @include box-shadow(0 0 0 10px $cor_secundaria);
+  clear: both;
+  img {
+    width: 100%;
+  }
 }
